@@ -1,0 +1,180 @@
+/* Reset default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layout untuk container */
+body {
+    background: #f8f1f1; /* Background lembut */
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #4a4a4a;
+    text-align: center;
+}
+
+/* Container utama */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+/* Desain kartu ucapan */
+.greeting-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Animasi muncul */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Judul ucapan */
+h1 {
+    font-size: 36px;
+    color: #ff6f61; /* Warna pink cerah */
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+}
+
+/* Pesan ucapan */
+.message {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #6b5b95;
+    margin-bottom: 20px;
+}
+
+/* Tanda tangan */
+.signature {
+    font-size: 16px;
+    color: #ff6f61;
+    font-style: italic;
+}
+
+/* Efek hover pada kartu */
+.greeting-card:hover {
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Animasi Kue Ulang Tahun */
+.cake {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 30px auto;
+}
+
+/* Kue bagian atas */
+.cake-top {
+    width: 100%;
+    height: 30px;
+    background-color: #f79c42;
+    border-radius: 15px 15px 0 0;
+    position: absolute;
+    top: 10px;
+}
+
+/* Kue bagian bawah */
+.cake-bottom {
+    width: 100%;
+    height: 50px;
+    background-color: #f7b731;
+    border-radius: 0 0 15px 15px;
+    position: absolute;
+    bottom: 0;
+}
+
+/* Api yang menyala */
+.flame {
+    position: absolute;
+    bottom: 70px;
+    width: 8px;
+    height: 20px;
+    background-color: #ff7f50;
+    border-radius: 50%;
+    animation: flameAnimation 0.6s infinite alternate;
+}
+
+/* Posisi masing-masing api */
+.flame:nth-child(1) {
+    left: 15px;
+    animation-delay: 0s;
+}
+
+.flame:nth-child(2) {
+    left: 35px;
+    animation-delay: 0.2s;
+}
+
+.flame:nth-child(3) {
+    left: 55px;
+    animation-delay: 0.4s;
+}
+
+/* Animasi api */
+@keyframes flameAnimation {
+    0% {
+        height: 20px;
+        opacity: 1;
+    }
+    100% {
+        height: 25px;
+        opacity: 0.5;
+    }
+}
+
+/* Kejutan */
+.surprise-message {
+    display: none;
+    font-size: 20px;
+    color: #ff6f61;
+    margin-top: 20px;
+    font-weight: bold;
+    animation: surpriseAnimation 1s ease-out;
+}
+
+@keyframes surpriseAnimation {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+button {
+    background-color: #ff6f61;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e55b4d;
+}
